@@ -29,7 +29,11 @@
 #input_div{
     display: flex;
     height: 60px;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+marquee{
+    width: 300px;
 }
 
