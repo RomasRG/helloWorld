@@ -1,4 +1,7 @@
-
+function anexar(componente){
+  container.append(componente);
+  return container;
+}
 
 function changeState(){
   let texto = entrada.value == ""? "Hello World!" : entrada.value;
@@ -6,42 +9,42 @@ function changeState(){
   element == null ? null : element.remove();
   if(cont == 11) {
     cont = 0;
-  }
+  };
   cont = cont + 1;
   console.log(cont);
 switch(cont){
   case 1:
-    document.body.append(negrito(texto));
+    anexar(negrito(texto));
     break;
   case 2:
-    document.body.append(marcado(texto));
+    anexar(marcado(texto));
     break;
   case 3:
-    document.body.append(small(texto));
+    anexar(small(texto));
     break;
   case 4:
-    document.body.append(del(texto));
+    anexar(del(texto));
     break;
   case 5:
-    document.body.append(inserido(texto));
+    anexar(inserido(texto));
     break;
   case 6:
-    document.body.append(supSub(texto));
+    anexar(supSub(texto));
     break;
   case 7:
-    document.body.append(code(texto));
+    anexar(code(texto));
     break;
   case 8:
-    document.body.append(quoting(texto));
+    anexar(quoting(texto));
     break;
   case 9:
-    document.body.append(abrv(texto));
+    anexar(abrv(texto));
     break;
   case 10:
-    document.body.append(backward(texto));
+    anexar(backward(texto));
     break;
   case 11:
-    document.body.append(italico(texto));
+    anexar(italico(texto));
     break;
 }
   return cont;
@@ -141,8 +144,11 @@ function backward(texto){
 
 const button = document.getElementById("but");
 const entrada = document.getElementById("input");
+const container = document.createElement('div');
 let cont = 0;
 
+container.id = "container";
+document.body.append(container);
 button.addEventListener('click', changeState);
 
 

@@ -37,3 +37,14 @@ marquee{
     width: 300px;
 }
 
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#container * {
+    font-size: 40px
+
+}
+
